@@ -12,3 +12,8 @@ This repository represents core of the aviation fan project. Especially frontend
 # Version
 0.0.1a
 
+# Changelog
+
+v0.0.1a
+- Project iniciation with vite.js + react.js + typescript
+- First draft for homepage design
