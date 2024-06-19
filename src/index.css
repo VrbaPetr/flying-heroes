@@ -1,68 +1,174 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* REAL CSS */
+#root{
+  max-width: 100%;
+  width: 100%;
+  padding: 0 0;
+  margin: 0 0;
+}
+html, body {
+  padding: 0 0;
+  margin: 0 0;
+  font-family: "B612";
+  background-color: #F8F8F8;
+}
+h2{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #1f2b46;
+  margin-bottom: 75px;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.main-content--wrapper{
+  width: 100%;
 }
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+.main-top{
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;  /* Full viewport height */
+  padding: 0px 30px;
+  background: linear-gradient(150deg, rgba(31, 43, 70, 0.9), rgba(62, 73, 98, 0.5)), url('assets/landtop2.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.main-top h1{
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 5rem;
+}
+.main-top p{
+  color: #b8b7be;
+  font-style: italic;
+  font-size: 1.3rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+
+.stories-wrapper{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  row-gap: 30px;
+  grid-template-rows: 700px 700px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.category-story--wrapper{
+  width: 90%;
+  margin: 0% 5%;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.category-story-img{
+  width: 100%;
+  max-height: 250px;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.category-story--wrapper h3{
+  color: #3e4962;
+  font-weight: 800;
+}
+
+.category-story-readmore{
+  display: block;
+  background-color: #3e4962;
+  color: #ffffff;
+  width: 60%;
+  margin: 10% 20%;
+  padding: 15px 0px;
+  border-radius: 15px;
+
+  text-decoration: none;
+}
+.category-story-tags-cloud{
+
+}
+.category-story-tag{
+  display: inline-block;
+  background-color: #6891bc;
+  color: #ffffff;
+  padding: 5px 5px;
+  margin: 5px 5px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+
+.main-website-purpose{
+  width: 80%;
+  margin: 0% 10%;
+}
+.main-website-purpose h3{
+  color: #3e4962;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+.main-website-purpose p{
+  margin: 50px 0%;
+}
+
+
+
+.logo-main{
+  max-width: 20%;
+}
+.divider-icon{
+  width: 100px;
+  margin-top: 50px;
+}
+.inline-nav-item{
+  display: inline-block;
+  text-decoration: none;
+  margin: 75px 30px;
+  font-size: 20px;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  color: #1f2b46;
+  border-radius: 15px;
+  font-weight: 700;
+}
+.inline-nav-item:hover{
+  background-color: #1f2b46;
+  color: #ffffff;
+  transition: all 1s ease;
+}
+
+
+
+footer{
+  width: 96%;
+  text-align: center;
+  padding: 12px 2%;
+  background-color: #1f2b46;
+  color: #aca4ad;
+}
+footer a{
+  color: #6891bc;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px){
+
+  .stories-wrapper{
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 600px;
   }
-  a:hover {
-    color: #747bff;
+}
+@media screen and (max-width: 800px){
+
+  .stories-wrapper{
+    grid-template-columns: 50% 50%;
   }
-  button {
-    background-color: #f9f9f9;
+}
+@media screen and (max-width: 600px){
+  .inline-nav-item{
+      margin: 25px 25px;
+  }
+  .stories-wrapper{
+    grid-template-columns: 100%;
   }
 }
