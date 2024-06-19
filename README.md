@@ -2,7 +2,7 @@
 
 This repository represents core of the aviation fan project. Especially frontend part.
 
-## Used technologies 
+# Used technologies 
 
 - Vite.js
 - React.js
